@@ -12,7 +12,7 @@ import br.com.alura.tdd.modelo.Funcionario;
 class BonusServiceTest {
 
 	@Test
-	void bonusDeveriaSerZeroParaFuncionariosComSalarioMuitoAlto() {
+	public void bonusDeveriaSerZeroParaFuncionariosComSalarioMuitoAlto() {
 		BonusService service = new BonusService();
 		
 		BigDecimal bonus = service.calcularBonus(new Funcionario("Rodrigo", LocalDate.now(), new BigDecimal("25000")));
@@ -21,7 +21,7 @@ class BonusServiceTest {
 	}
 
 	@Test
-	void bonusDeveriaSerDezPorCentoDoSalario() {
+	public void bonusDeveriaSerDezPorCentoDoSalario() {
 		BonusService service = new BonusService();
 		BigDecimal bonus = service.calcularBonus(new Funcionario("Rodrigo", LocalDate.now(), new BigDecimal("2500")));
 		
@@ -29,7 +29,7 @@ class BonusServiceTest {
 	}
 	
 	@Test
-	void bonusDeveriaSerExatamenteMilReais() {
+	public void bonusDeveriaSerExatamenteMilReais() {
 		BonusService service = new BonusService();
 		BigDecimal bonus = service.calcularBonus(new Funcionario("Rodrigo", LocalDate.now(), new BigDecimal("10000")));
 		
